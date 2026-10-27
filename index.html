@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Tiket Konser</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 480px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+        .form-group {
+            margin-bottom: 12px;
+        }
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 14px;
+            color: #34495e;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 7px 9px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .row {
+            display: flex;
+            gap: 8px;
+        }
+        .row input:first-child {
+            width: 50%;
+        }
+        .row input:last-child {
+            width: 50%;
+        }
+        .telp-row input:first-child {
+            width: 70px;
+        }
+        .telp-row input:last-child {
+            flex: 1;
+        }
+        .radio-option {
+            margin: 4px 0;
+            font-size: 14px;
+        }
+        textarea {
+            min-height: 55px;
+            resize: none;
+        }
+        button {
+            width: 100%;
+            background-color: #2b78e4;
+            color: white;
+            border: none;
+            padding: 9px;
+            border-radius: 4px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2569cb;
+        }
+        .hint {
+            font-size: 11px;
+            color: #95a5a6;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tiket ke Konser Terhebat Yang Pernah Ada!</h1>
+        <p class="subtitle">Dapatkan tiket hari ini sebelum terlewat!</p>
+
+        <form>
+            <div class="form-group">
+                <label>Nama</label>
+                <div class="row">
+                    <input type="text" placeholder="Nama Depan">
+                    <input type="text" placeholder="Nama Belakang">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" placeholder="contoh: nama@contoh.com">
+                <div class="hint">contoh@contoh.com</div>
+            </div>
+
+            <div class="form-group">
+                <label>Nomor Telepon</label>
+                <div class="row telp-row">
+                    <input type="text" placeholder="Kode">
+                    <input type="tel" placeholder="Nomor Telepon">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Pilihan tempat duduk</label>
+                <div class="radio-option">
+                    <input type="radio" name="tempat"> Panggung Depan
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="tempat"> Tengah
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="tempat"> Balkon
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="tempat"> Lainnya
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Jumlah Tiket</label>
+                <input type="text" placeholder="contoh:">
+            </div>
+
+            <div class="form-group">
+                <label>Ada pertanyaan?</label>
+                <textarea placeholder="Ketik di sini..."></textarea>
+            </div>
+
+            <button type="button">Dapatkan Tiket!</button>
+        </form>
+    </div>
+</body>
+</html>
